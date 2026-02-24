@@ -170,6 +170,4 @@ This project is for demonstration purposes.
 ## Contact
 
 For questions or support, please contact the development team.
-=======
-# Smart-Parking
->>>>>>> 2a1ba0b811feff6de4c975fef61bf7ada8bca6c4
+
