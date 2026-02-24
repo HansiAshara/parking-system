@@ -125,16 +125,6 @@ flutter run
 - Email: `owner@smartpark.com`
 - Password: `password`
 
-## Screenshots
-
-| Splash | Welcome | Login | Driver Home |
-|--------|---------|-------|-------------|
-| ![Splash](screenshots/splash.png) | ![Welcome](screenshots/welcome.png) | ![Login](screenshots/login.png) | ![Driver Home](screenshots/driver_home.png) |
-
-| Search | Bookings | Owner Dashboard | Earnings |
-|--------|----------|-----------------|----------|
-| ![Search](screenshots/search.png) | ![Bookings](screenshots/bookings.png) | ![Owner Dashboard](screenshots/owner_dashboard.png) | ![Earnings](screenshots/earnings.png) |
-
 ## Firebase Setup
 
 ### Authentication
