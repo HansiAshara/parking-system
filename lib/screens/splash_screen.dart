@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../providers/auth_provider.dart';
 import '../utils/theme.dart';
-import 'welcome_screen.dart';
-import 'driver/driver_home_screen.dart';
-import 'owner/owner_dashboard_screen.dart';
+import 'google_auth_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -49,23 +45,9 @@ class _SplashScreenState extends State<SplashScreen>
     await Future.delayed(const Duration(seconds: 3));
     if (!mounted) return;
 
-    final authProvider = Provider.of<AuthProvider>(context, listen: false);
-
-    if (authProvider.isAuthenticated) {
-      if (authProvider.isDriver) {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const DriverHomeScreen()),
-        );
-      } else {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const OwnerDashboardScreen()),
-        );
-      }
-    } else {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const WelcomeScreen()),
-      );
-    }
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (_) => const GoogleAuthScreen()),
+    );
   }
 
   @override
@@ -114,7 +96,10 @@ class _SplashScreenState extends State<SplashScreen>
                               height: 70,
                               decoration: BoxDecoration(
                                 gradient: const LinearGradient(
-                                  colors: [AppColors.accent, AppColors.accentDark],
+                                  colors: [
+                                    AppColors.accent,
+                                    AppColors.accentDark
+                                  ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ),
